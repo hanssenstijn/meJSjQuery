@@ -42,3 +42,23 @@ function showDivs(n) {
     }
     x[slideIndex - 1].style.display = "block";
 }
+
+// API call to the reddit website to get multiple images
+$('.btn').click(function() {
+    $('.text').text('loading . . .');
+
+    $.ajax({
+        type: "GET",
+        url: "https://www.reddit.com/r/aww/search.json?q=puppy&restrict_sr=true",
+        success: function(response) {
+            $('.text').html('');
+            var children = response.data.children;
+            for (var i = 0; i < children.length; i++) {
+                var src = children[i].data.thumbnail;
+                var image = "<img class=\"dog--img\" src = '" + children[i].data.thumbnail + "' / > ";
+                $('.text').append(image);
+            }
+
+        },
+    });
+});
