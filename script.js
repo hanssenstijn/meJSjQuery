@@ -62,3 +62,17 @@ $('.btn').click(function() {
         },
     });
 });
+
+// API call to the reddit website to get multiple images
+$('.btn2').click(function() {
+    $('.text2').text('loading . . .');
+
+    $.ajax({
+        url: "api.openweathermap.org/data/2.5/weather?q=Maastricht&appid=2c574178a9481451d546499bb2293d77",
+        type: "GET",
+        dataType: "jsonp",
+        success: function(data) {
+            console.log(data)
+        },
+    });
+});
