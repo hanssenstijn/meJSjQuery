@@ -52,6 +52,16 @@ h1 {
     padding: 10px;
 }
 
+.dogs {
+    background-color: white;
+    padding: 10px;
+}
+
+.weather {
+    background-color: white;
+    padding: 10px;
+}
+
 .mySlides {
     display: block;
     margin-left: auto;
