@@ -64,15 +64,19 @@ $('.btn').click(function() {
 });
 
 // API call to the reddit website to get multiple images
-$('.btn2').click(function() {
-    $('.text2').text('loading . . .');
+$('.btnweather').click(function() {
+    $('.textweather').text('loading . . .');
 
     $.ajax({
-        url: "api.openweathermap.org/data/2.5/weather?q=Maastricht&appid=2c574178a9481451d546499bb2293d77",
+        url: "http://api.openweathermap.org/data/2.5/weather?q=Maastricht&appid=2c574178a9481451d546499bb2293d77",
         type: "GET",
         dataType: "jsonp",
         success: function(data) {
-            console.log(data)
+            $('.textweather').html("The weather in " +
+                data.name + " is at this moment " +
+                Math.round(data.main.temp - 273.15) + " &#8451 (Feeling Temperature: " +
+                Math.round(data.main.feels_like - 273.15) + " &#8451 ) . Weather State: " +
+                data.weather[0].main);
         },
     });
 });
