@@ -75,7 +75,7 @@ $('.btnweather').click(function() {
             $('.textweather').html('');
             var temp = Math.round(data.main.temp - 273.15).toString();
             var feels = Math.round(data.main.feels_like - 273.15).toString();
-            $('.textweather').html("The weather in " +
+            $('.textweather').html("The temperature in " +
                 data.name.bold().fontsize(5) + " is at this moment " +
                 temp.bold().fontsize(5) + " &#8451 (Feeling Temperature: " +
                 feels.bold().fontsize(5) + " &#8451 ) . Weather State: " +
