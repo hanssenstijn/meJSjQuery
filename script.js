@@ -68,15 +68,18 @@ $('.btnweather').click(function() {
     $('.textweather').text('loading . . .');
 
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q=Maastricht&appid=2c574178a9481451d546499bb2293d77",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=Maastricht&appid=2c574178a9481451d546499bb2293d77",
         type: "GET",
         dataType: "jsonp",
         success: function(data) {
+            $('.textweather').html('');
+            var temp = Math.round(data.main.temp - 273.15).toString();
+            var feels = Math.round(data.main.feels_like - 273.15).toString();
             $('.textweather').html("The weather in " +
-                data.name + " is at this moment " +
-                Math.round(data.main.temp - 273.15) + " &#8451 (Feeling Temperature: " +
-                Math.round(data.main.feels_like - 273.15) + " &#8451 ) . Weather State: " +
-                data.weather[0].main);
+                data.name.bold().fontsize(5) + " is at this moment " +
+                temp.bold().fontsize(5) + " &#8451 (Feeling Temperature: " +
+                feels.bold().fontsize(5) + " &#8451 ) . Weather State: " +
+                data.weather[0].main.bold().fontsize(5));
         },
     });
 });
