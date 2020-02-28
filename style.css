@@ -1,7 +1,8 @@
-* {
-    background-image: url("./pics/developer.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+html {
+    background: url(./pics/developer.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -37,40 +38,6 @@ h1 {
     text-align: center;
 }
 
-.programming {
-    background-color: white/* #C0B283 */
-    ;
-    padding: 10px;
-}
-
-.hobby {
-    background-color: white/* #DCD0C0 */
-    ;
-    padding: 10px;
-}
-
-.gaming {
-    background-color: white/* #5A5A5A */
-    ;
-    padding: 10px;
-}
-
-.sports {
-    background-color: white/* #373737 */
-    ;
-    padding: 10px;
-}
-
-.dogs {
-    background-color: white;
-    padding: 10px;
-}
-
-.weather {
-    background-color: white;
-    padding: 10px;
-}
-
 .mySlides {
     display: block;
     margin-left: auto;
@@ -98,6 +65,8 @@ h1 {
     width: 90%;
     height: auto;
     padding: 25px;
+    background-color: white;
+    background-color: transparent;
 }
 
 .w3-button {
