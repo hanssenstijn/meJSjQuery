@@ -1,3 +1,10 @@
+* {
+    background-image: url("./pics/developer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 h1 {
     font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -20,8 +27,6 @@ h1 {
 
 .header {
     text-align: center;
-    background: white;
-    border-radius: 50%;
 }
 
 .circular--header {
