@@ -33,22 +33,26 @@ h1 {
 }
 
 .programming {
-    background-color: #C0B283;
+    background-color: white/* #C0B283 */
+    ;
     padding: 10px;
 }
 
 .hobby {
-    background-color: #DCD0C0;
+    background-color: white/* #DCD0C0 */
+    ;
     padding: 10px;
 }
 
 .gaming {
-    background-color: #5A5A5A;
+    background-color: white/* #5A5A5A */
+    ;
     padding: 10px;
 }
 
 .sports {
-    background-color: #373737;
+    background-color: white/* #373737 */
+    ;
     padding: 10px;
 }
 
